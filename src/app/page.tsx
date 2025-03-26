@@ -23,16 +23,35 @@ export default function Home() {
   }
 
   return (
-    <main>
-      <Header />
-      <Hero />
-      <Problems />
-      <Benefits />
-      <Program />
-      <Instructor />
-      <RegistrationForm />
-      <FAQ />
-      <Footer />
-    </main>
+    <>
+      <main>
+        <Header />
+        <Hero />
+        <Problems />
+        <Benefits />
+        <Program />
+        <Instructor />
+        <RegistrationForm />
+        <FAQ />
+        <Footer />
+      </main>
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "AI START 인공지능 개발자 양성 과정",
+            "description": "인공지능 개발자가 되고 싶으신가요? AI START와 함께 실무 중심의 AI 개발 실력을 키워보세요.",
+            "provider": {
+              "@type": "Organization",
+              "name": "AI START",
+              "url": "https://aistart.store"
+            }
+          })
+        }}
+      />
+    </>
   )
 }
